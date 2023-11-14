@@ -1,0 +1,24 @@
+
+
+Para instalar o npm
+npm install -g npm
+
+Para Criar Projeto e React
+npx creat-react-app nome do projeto
+
+Para Criar Projeto e ReactVite
+npm create vite@latest
+
+npm install
+npm run dev
+
+Para adicionar o sass nas dependencias 
+npm install sass
+
+Para adicionar o pug nas dependencias 
+npm install --save-dev babel-plugin-transform-react-pug
+
+Para adicionar Frameword de Graficos
+npm install --save react-apexcharts apexcharts
+
+$ npm install swiper
