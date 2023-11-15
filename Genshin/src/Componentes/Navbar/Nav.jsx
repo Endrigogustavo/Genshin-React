@@ -1,26 +1,26 @@
 
-import './Nav.scss'
+import { Swiper, SwiperSlide } from "swiper/react";
 
-function App() {
- 
+// Import Swiper styles
+import "swiper/css";
 
+import "./Nav.scss";
+
+export default function App() {
   return (
     <>
-
-<nav>
-  <a href="#">No mask</a>
-  <ul className="list">
-    <li><a href="#">About</a></li>
-    <li><a href="#">Projects</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-  <button className="search">Search</button>
-  <button className="menu">Menu</button>
-</nav>
-
-   </>
-  )
+      <br />
+      <Swiper watchSlidesProgress={true} slidesPerView={3} className="mySwiper">
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+    </>
+  );
 }
-
-export default App

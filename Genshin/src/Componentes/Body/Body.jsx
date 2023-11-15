@@ -1,53 +1,95 @@
-import './Body.scss';
-function Body() {
+import './Img/furina1.webp'
+import './Img/furina_ousia_render_by_taemuepuan_dgett44.png'
+import './Body.scss'
 
+function Body() {
+ 
 
   return (
     <>
-      
-<div className="container">
-  <div className="container-inner">
-    <div className="main-content">
-      <div className="main-headings" id="main-headings-js">
-      <p id="by-line">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-      <div className="heading">
-        <h3 id="heading1">Decouvrez</h3>
-        <h3 id="heading2">la Jeune,</h3>
-        <h1 id="heading3">Beaute</h1>
-      </div>
-
-      <div className="short-bio">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellat, quod sed optio nesciunt aspernatur inventore ab, nostrum accusantium harum dolor voluptate nulla!</p>
-   
-      </div>
-
-      <a href="#" className="link">Read More</a>
-      </div>
-      
-      <div className="more-info " id="more-info-js">
-        
-        <h4>Lorem ipsum dolor sit.</h4>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse expedita impedit iste, quibusdam debitis fugit repudiandae voluptatum vero quod nulla!</p>
-        
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita delectus iusto facere dignissimos quaerat facilis voluptatibus fuga quod impedit. Atque tenetur amet officia repudiandae odit.</p>
-        
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni saepe suscipit deleniti porro fugit! Atque nisi alias a porro fugiat incidunt exercitationem! Nihil, consectetur. Expedita.</p>
-      </div>
-      
+<input checked='checked' id='rad1' name='rad' type='radio'></input>
+<input id='rad2' name='rad' type='radio'></input>
+<input id='rad3' name='rad' type='radio'></input>
+<div className='btn'></div>
+<div id='wrap'>
+  
+  <div className='slide'>
+    <div className='label'></div>
+    <div className='search'></div>
+    <div className='image'></div>
+    <div className='content'>
+      <h1></h1>
+      <p>
+        <span>Localização:</span>
+        <span>Elemento:</span>
+      </p>
     </div>
-
-    <div className="image-wrapper">
-    <div className="image-container">
-      <img className="image" src="https:.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=755bbb2b0afd5808494a8723774cd141" alt="image of a young woman."></img>
-    </div>
+    <label>Arconte</label>
+    <p className='classifications'>
+    <span>Tipo</span>
+      <span>Elemento</span>
+      <span>Arma</span>
+      <span>Idade</span>
+     
+    </p>
   </div>
-</div>
-</div>
+  
+   
+  <div className='slide'>
+    <div className='label'></div>
+    <div className='search'></div>
+    <div className='image'></div>
+    <div className='content'>
+      <h1></h1>
+      <p>
+        <span>Localização:</span>
+        <span>Elemento:</span>
+      </p>
+    </div>
+    <label>Arconte</label>
+    <p className='classifications'>
+    <span>Tipo</span>
+      <span>Elemento</span>
+      <span>Arma</span>
+      <span>Idade</span>
+     
+    </p>
+  </div>
+  
+   
+  <div className='slide'>
+    <div className='label'></div>
+    <div className='search'></div>
+    <div className='image'></div>
+    <div className='content'>
+      <h1></h1>
+      <p>
+        <span>Localização:</span>
+        <span>Elemento:</span>
+      </p>
+    </div>
+    <label>Arconte</label>
+    <p className='classifications'>
+    <span>Tipo</span>
+      <span>Elemento</span>
+      <span>Arma</span>
+      <span>Idade</span>
+     
+    </p>
+  </div>
+  
+  
+  
+  
 
+</div>
+<div className='panels'></div>
+<div className='panels'></div>
+<div className='panels'></div>
+
+    
     </>
   )
 }
 
 export default Body
-
