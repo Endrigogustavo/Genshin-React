@@ -1,4 +1,4 @@
-$pink: #31039c;
+$pink: #f58286;
 $purple: #64377f;
 $yellow: #fef7ce;
 $lightorange: #f19d46;
@@ -17,9 +17,12 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100%;
-  width:100%;
- 
+  background:$yellow;
+  width: 100%;
+  height: 100%;
+  *{
+    box-sizing:border-box;
+  }
   
   .btn{
     position:absolute;
@@ -201,43 +204,95 @@ body{
       }
     }
   }
-
   #wrap{
-    width:1000px;
-    height:600px;
+    min-width:800px;
+    min-height:600px;
     position:relative;
     background:$white;
+    overflow: hidden;
+    margin-top: 100px;
     box-shadow:0 10px 40px -10px rgba(0,0,0,0.45);
-    .jar{
-      position:absolute;
-      width:50%;
-      height:100%;
-      left:25%;
-      overflow:hidden;
-      z-index:8;
-      &:before, &:after{
-        content:'';
-        position:absolute;
-        width:100%;
-        height:100%;
-        left:0;
-        top:0;
-       
-        background-size:contain;
-        background-repeat:no-repeat;
-        background-position:center;
-        transition:0.3s ease-in-out;
-        transform:translateY(100%) scaleX(0.75);
-      }
 
+    .cart, .cart .inner{
+      z-index:0;
+      position:absolute;
+      width:100%;
+      height:100%;
+      left:0;
+      top:0;
+      overflow:hidden;
+    }
+    .cartbtn{
+      position:absolute;
+      z-index:2;
+      width:50%;
+      left:calc(50% - 50px);
+      bottom:0;
+      height:45%;
+      pointer-events:none;
+      &:after{
+        content:'⟶';
+        position:absolute;
+        font-size:20px;
+        right:0px;
+        top:20px;
+        opacity:0;
+        color:$transparent;
+        transition:opacity 0.2s ease-in-out;
+      }
     }
 
-
- 
-  
-
-
-    
+    .outer{
+      z-index:-1;
+      position:absolute;
+      width:25%;
+      height:50%;
+      .box{
+        content:'';
+        position:absolute;
+        width:100vw;
+        height:400vh;
+        right:0;
+        bottom:0;
+        overflow:hidden;
+        &:before{
+          content:'';
+          position:absolute;
+          width:100%;
+          height:100%;
+          left:0;
+          top:0;
+          background:linear-gradient(to top, $pink 25%, $teal 25%, $teal 50%, $red 50%, $red 75%, $pink 75%);
+          transition:transform 600ms $transition;
+        }
+      }
+    }
+    &:before, &:after{
+      content:'';
+      position:absolute;
+      width:200vw;
+      height:100vh;
+      background:linear-gradient(to right, $yellow 25%, $darkorange 25%, $darkorange 50%, $teal 50%, $teal 75%, $yellow 75%);
+      margin-top:calc(-50vh + 300px);
+      z-index:-2;
+      transition:transform 650ms $transition;
+      left:0;
+      top:0;
+      
+    }
+    &:before{
+      margin-left:calc(-50vw + 400px);
+    }
+    &:after{
+      background:linear-gradient(to bottom, $blue 25%, $lightorange 25%, $lightorange 50%, $purple 50%, $purple 75%, $blue 75%);
+      opacity:1;
+      left:50%;
+      height:400vh;
+      width:50vw;
+      z-index:-1;
+      transition:transform 700ms $transition;
+      margin-top:calc(-250vh + 300px);
+    }
     .slide{
       position:absolute;
       display:grid;
@@ -251,38 +306,44 @@ body{
       overflow:hidden;
       &:nth-of-type(1){
         &:before{
-          background:$pink;
+          background:#2b208a;
         }
         .image{
-          background-image:url('./Img/furina_ousia_render_by_taemuepuan_dgett44.png');
-          
-          height: 90%;
+          background-image:url('./Img/raiden.webp');
+          height: 150%;
         }
-
+        .label{
+          &:before{
+            background:$purple;
+          }
+        }
         .content{
           h1{
             &:before{
-              content:'Furina'
+              margin-left: 60px;
+              content:'Shogun'
             }
           }
           p{
             &:before{
-              background-image:url('./Img/furina1.webp');
+              background-image:url('./Img/Conquista_Inazuma-_A_Ilha_de_Trov%3Fes_e_Eternidade_-_Parte_II.webp');
+              margin: 20px;
             }
             span{
               &:first-of-type{
                 &:after{
-                  content:'Fonteine';
+                  content:'Sandwich';
                 }
               }
               &:last-of-type{
                 &:after{
-                  content:'Hydro';
+                  content:'Hard No';
                 }
               }
             }
           }
         }
+
         p.classifications{
           span{
             &:first-of-type{
@@ -318,81 +379,7 @@ body{
           }
         }
       }
-
-
-
-
-
-      &:nth-of-type(2){
-        &:before{
-          background:$purple;
-        }
-        .image{
-          background-image:url('./Img/raiden.png');
-          height: 100%;
-          width: 100%;
-        }
-        .content{
-          h1{
-            &:before{
-              content:'Shogun Raiden'
-            }
-          }
-          p{
-            &:before{
-              background-image:url('./Img/Conquista_Inazuma-_A_Ilha_de_Trov%3Fes_e_Eternidade_-_Parte_II.webp');
-            }
-            span{
-              &:first-of-type{
-                &:after{
-                  content:'Your Hair';
-                }
-              }
-              &:last-of-type{
-                &:after{
-                  content:'Nope';
-                }
-              }
-            }
-          }
-        }
-        p.classifications{
-          span{
-            &:first-of-type{
-              &:after{
-                content:'Seriously';
-              }
-            }
-            &:nth-of-type(2){
-              &:after{
-                content:'These';
-              }
-            }
-            &:nth-of-type(3){
-              &:after{
-                content:'Things';
-              }
-            }
-            &:nth-of-type(4){
-              &:after{
-                content:'Are';
-              }
-            }
-            &:nth-of-type(5){
-              &:after{
-                content:'Pretty';
-              }
-            }
-            &:nth-of-type(6){
-              &:after{
-                content:'Creepy';
-              }
-            }
-          }
-        }
-      }
-
-
+     
       &:before, .label:before{
         content:'';
         position:absolute;
@@ -406,16 +393,15 @@ body{
         transform-origin:bottom;
         transition:all 600ms $transition;
       }
-
-      
       .label{
-     
+        grid-column: 1 / span 1;
+        grid-row:1 / span 1;
         position:relative;
         overflow:hidden;
-       
-    
+        display: none;
+ 
       }
-     
+  
       .image{
         position:absolute;
         width:47.5%;
@@ -429,7 +415,18 @@ body{
         will-change:transform;
       }
     }
-
+    label{
+      color:$white;
+      -webkit-text-stroke: 0.75px rgba(0,0,0,0.25);
+      font-size:50px;
+      font-weight:900;
+      position:absolute;
+      margin:0;
+      top:275px;
+      width:50%;
+      left:-125px;
+      transform:rotate(-90deg);
+    }
     .content{
       position:absolute;
       width:50%;
@@ -473,20 +470,7 @@ body{
           }
         }
       }
-      h1{
-        display:inline-block;
-        text-align:center;
-        width:100%;
-        font-size:40px;
-        &:before{
-          content:'';
-          display:block;
-          text-align:left;
-          max-width:100%;
-          font-family:"Playfair Display";
-          color:$white;
-        }
-      }
+      
     }
     p.classifications{
       position:absolute;

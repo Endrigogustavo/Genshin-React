@@ -21,4 +21,11 @@ npm install --save-dev babel-plugin-transform-react-pug
 Para adicionar Frameword de Graficos
 npm install --save react-apexcharts apexcharts
 
-$ npm install swiper
+npm install swiper
+
+npm install react-bootstrap bootstrap
+
+https://devsnap.me/css-sliders
+
+
+https://codepen.io/cobra_winfrey/pen/mZePLQ
