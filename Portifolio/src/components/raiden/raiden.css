@@ -1,0 +1,79 @@
+
+.fundo{
+    width: 65%;
+    text-align: center;
+    height: auto;
+}
+.fundoimg{
+    position: absolute;
+    width: 100%;
+}
+.circulo{
+    position: absolute;
+    width: 35%;
+    height: auto;
+    top: 110px;
+flex-shrink: 0;
+border-radius: 800px;
+background: lightgray 50% / cover no-repeat;
+}
+
+.raiden{
+    position: absolute;
+    width: 60%;
+    top: 110px;
+    height: auto;
+    left: 25%;
+    z-index: 1;
+}
+.logo{
+    position: absolute;
+    width: 35%;
+   
+    
+    height: auto;
+    left: 33%;
+}
+
+.left{
+    position: absolute;
+    width: 10%;
+}
+
+.right{
+    position: absolute;
+    width: 45%;
+    right: -19%;
+    top: 40%;
+transform: rotate(89.768deg);
+flex-shrink: 0;
+}
+
+.text{
+    margin-left: 50px;
+    width: 35%;
+    height: 500px;
+    z-index: 1;
+    top: 25%;
+    position: absolute;
+}
+.sobre{
+    color: #000;
+    font-family: Bebas Neue;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 95%; /* 85.5px */
+    letter-spacing: 5.4px;
+}
+
+.sobre2{
+    color: #000;
+font-family: Antic;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 20px */
+letter-spacing: 1.2px;
+}
+
